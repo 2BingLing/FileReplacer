@@ -1,107 +1,107 @@
 # FileReplacer
 
-[中文版本](README.zh.md) | English Version
+[中文版本](README.md) | [English Version](README.en.md)
 
-FileReplacer is a lightweight file content replacement tool designed for static web page developers to quickly replace fixed links, code snippets, or text content in files.
+FileReplacer 是一个轻量级的文件内容替换工具，为静态网页开发者设计，用于快速替换文件中的固定链接、代码片段或文本内容。
 
-## Features
+## 功能特性
 
-- **Multi-format support**: Supports .md, .html, .txt and other file formats
-- **Intelligent search**: Uses regular expressions for content matching, supports fuzzy matching
-- **Interactive operation**: Supports browsing through matching results and selective replacement
-- **Batch operation**: One-click replacement of all matching content
-- **Real-time preview**: Displays matching file paths, line numbers, and content
-- **Graphical interface**: Modern graphical interface with Chinese and English switching
-- **Multi-language support**: Built-in Chinese and English language switching functionality
+- **多格式支持**：支持 .md、.html、.txt 等多种文件格式
+- **智能搜索**：使用正则表达式进行内容匹配，支持模糊匹配
+- **交互式操作**：支持上下查询匹配结果，选择性替换
+- **批量操作**：一键替换所有匹配的内容
+- **实时预览**：显示匹配的文件路径、行号和内容
+- **图形界面**：现代化的图形界面，支持中英文切换
+- **多语言支持**：内置中英文语言切换功能
 
-## Installation
+## 安装方法
 
-### Method 1: Run Python script directly
+### 方法一：直接运行 Python 脚本
 
-1. Ensure Python 3.6 or higher is installed
-2. Download the `file_replacer.py` file to your local machine
-3. Run in the command line:
+1. 确保已安装 Python 3.6 或更高版本
+2. 下载 `file_replacer.py` 文件到本地
+3. 在命令行中运行：
 
 ```bash
 python file_replacer.py
 ```
 
-### Method 2: Use EXE file (Windows)
+### 方法二：使用 EXE 文件（Windows）
 
-1. Download the `file_replacer.exe` file
-2. Double-click to run or use in the command line
+1. 下载 `file_replacer.exe` 文件
+2. 直接双击运行或在命令行中使用
 
-## Usage Examples
+## 使用示例
 
-### 1. Search content
+### 1. 搜索内容
 
 ```bash
-# Search all files containing "old-link.com" in the current directory
+# 在当前目录搜索包含 "old-link.com" 的所有文件
 python file_replacer.py --pattern "old-link.com"
 
-# Search in a specified directory
+# 在指定目录搜索
 python file_replacer.py --dir "path/to/directory" --pattern "old-link.com"
 ```
 
-### 2. Interactive replacement
+### 2. 交互式替换
 
 ```bash
-# Search and enter interactive replacement mode
+# 搜索并进入交互式替换模式
 python file_replacer.py --pattern "old-link.com" --replace "new-link.com"
 ```
 
-### 3. Batch replacement
+### 3. 批量替换
 
 ```bash
-# Search and batch replace all matches
+# 搜索并批量替换所有匹配项
 python file_replacer.py --pattern "old-link.com" --replace "new-link.com" --batch
 ```
 
-## Graphical Interface Usage
+## 图形界面使用
 
-1. Run `file_replacer.py` or `file_replacer.exe` to start the graphical interface
-2. Select a directory or file in the search parameters section
-3. Enter the search pattern and replacement content
-4. Optionally enable fuzzy matching mode
-5. Click the "Search" button to view matching results
-6. Select a match to view context content
-7. Click "Replace Current" or "Replace All" buttons to perform replacement
-8. View operation results in the status label at the bottom of the interface
+1. 运行 `file_replacer.py` 或 `file_replacer.exe` 启动图形界面
+2. 在搜索参数区域选择目录或文件
+3. 输入搜索模式和替换内容
+4. 可选择开启模糊匹配模式
+5. 点击"搜索"按钮查看匹配结果
+6. 选择匹配项查看上下文内容
+7. 点击"替换当前"或"替换全部"按钮执行替换
+8. 在界面底部的状态标签中查看操作结果
 
-## Language Switching
+## 语言切换
 
-In the graphical interface, click the "Language" button to switch between Chinese and English interface languages.
+在图形界面中，点击"语言"按钮可以在中英文之间切换界面语言。
 
-## Search Mode Explanation
+## 搜索模式说明
 
-### Exact Matching Mode
-- Uses regular expressions for exact matching
-- Suitable for finding fixed strings, links, or code snippets
-- Matching results are accurate and do not include similar but different content
-- Example: Searching for "https://old-link.com" will only match exactly the same string
+### 精确匹配模式
+- 使用正则表达式进行精确匹配
+- 适合查找固定的字符串、链接或代码片段
+- 匹配结果准确，不会包含相似但不同的内容
+- 示例：搜索 "https://old-link.com" 只会匹配完全相同的字符串
 
-### Fuzzy Matching Mode
-- Uses similarity algorithm for matching
-- Suitable for finding similar but not identical content
-- Matching results include content with high similarity
-- Similarity threshold is 0.6 (can be adjusted in the code)
-- Example: Searching for "https://old-link.com" will match "https://new-old-link.com" and other similar content
+### 模糊匹配模式
+- 使用相似度算法进行匹配
+- 适合查找相似但不完全相同的内容
+- 匹配结果包含相似度较高的内容
+- 相似度阈值为 0.6（可在代码中调整）
+- 示例：搜索 "https://old-link.com" 会匹配 "https://new-old-link.com" 等相似内容
 
-## Frequently Asked Questions
+## 常见问题
 
-### Q: Why isn't my replacement taking effect?
-A: Please check if the regular expression is correct, especially special characters need to be escaped. In fuzzy matching mode, ensure the similarity is high enough.
+### Q: 为什么我的替换没有生效？
+A: 请检查正则表达式是否正确，特别是特殊字符需要转义。在模糊匹配模式下，确保相似度足够高。
 
-### Q: Which file formats are supported?
-A: By default, .md, .html, and .txt formats are supported. You can modify the `extensions` parameter in the code to add other formats.
+### Q: 支持哪些文件格式？
+A: 默认支持 .md、.html、.txt 格式，您可以在代码中修改 `extensions` 参数添加其他格式。
 
-### Q: How to handle large files?
-A: The tool reads files line by line, which may have performance implications for very large files. It is recommended to use it within a small scope.
+### Q: 如何处理大文件？
+A: 工具会逐行读取文件，对于非常大的文件可能会有性能影响，建议在小范围内使用。
 
-## License
+## 许可证
 
 MIT License
 
-## Contribution
+## 贡献
 
-Welcome to submit Issues and Pull Requests!
+欢迎提交 Issue 和 Pull Request！

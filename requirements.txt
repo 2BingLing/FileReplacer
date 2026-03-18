@@ -1,0 +1,2 @@
+# No external dependencies required
+# This tool only uses standard library modules
